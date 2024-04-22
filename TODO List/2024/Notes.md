@@ -1,17 +1,42 @@
 # OSL Algorithm
 ## Approach 1: Approximate-Model-based RL with Multimodal transformer model
 
-Functions:
-- Given model, run approximate-model-based RL navigation.
-  - Use and update the model initialized by multimodal transformer model.
 
-- Generate model for RL, given: goal-relevance map function and infotaxis function.
-  - Generate goal-relevance map function, given: image, depth, position sensing.
+### Decision making function:
+#### Model-based RL
+Input:
+- Olfaction map
+- Semantic goal-relevance map
+- Robot experience
+Output:
+- Policy to reach goal.
 
-    - Goal-relevance score: given the list of objects to an LLM model, determine cosine distance of objects 
-    - **Ground goal-relevance scores in the multimodal map.**
-    
-  - Generate infotaxis function, given: chemical sensing, anemosensing.
+
+### Goal function:
+#### LLM goal relevance:
+Input:
+- Semantic map of the area
+- Goal
+Output:
+- 
+##### Approach 1:
+- Goal-relevance score: given the list of objects to an LLM model, determine cosine distance of objects 
+
+### Vision function:
+#### VLM object grounding:
+Input:
+- Egocentric image
+- List of objects in the environment.
+- Depth sensing
+- Robot position
+
+Output:
+- Semantic map
+
+### Olfaction function:
+#### Infotaxis
+Input: chemical and anemosensing.
+Output: probable plume source in map.
 
 
 ## Approach 2: Language model: DiLU.
