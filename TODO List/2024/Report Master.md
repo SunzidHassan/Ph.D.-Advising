@@ -9,3 +9,6 @@
 - [ ] Move CH5 right after CH3
 
 Introduction - Related Works - Methodology - Experiment
+
+
+- [ ] LLM Part: Sample trial: snapshots of sample trail in 10s, 20s, 30s, .... 
